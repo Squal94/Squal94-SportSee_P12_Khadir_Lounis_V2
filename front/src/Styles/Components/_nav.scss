@@ -22,13 +22,13 @@
         font-size: 24px;
         margin: 0 98px;
         li {
-          color: $color-font-menu;
+          color: $white;
           transition: 0.2s;
           cursor: pointer;
 
           &:hover {
             // Changement de couleur au survole de la souris
-            color: $color-primary;
+            color: $color-hover;
           }
         }
       }

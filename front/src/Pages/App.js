@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
+import Aside from "../Components/Aside";
 import Nav from "../Components/Nav";
 
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
     <div>
       <BrowserRouter>
         <Nav />
+        <Aside />
       </BrowserRouter>
     </div>
   );

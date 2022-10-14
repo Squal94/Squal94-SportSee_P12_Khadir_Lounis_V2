@@ -1,0 +1,38 @@
+.aside {
+  width: $aside-width;
+  display: flex;
+  position: relative;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  height: 1024px;
+  &__menu {
+    &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $white;
+      width: $btn-aside;
+      height: $btn-aside;
+      margin: 20px auto;
+      border-radius: $btn-radius;
+      transition: background-color 0.3s;
+      &:hover {
+        background-color: $color-hover;
+      }
+      &--img {
+        width: $btn-aside-img;
+      }
+    }
+  }
+  &__copyright {
+    position: absolute;
+    left: 54px;
+    bottom: 59px;
+    width: 12px;
+  }
+}
+
+// width: $btn-aside-img;
+// height: $btn-aside-img;
