@@ -1,0 +1,24 @@
+// Initialisation de la variable font-1
+@font-face {
+  font-family: "Roboto";
+  src: url(./../Assets/font/Roboto-Regular.ttf);
+}
+
+$desktop-width: 100%;
+$color-font-menu: rgb(255, 255, 255);
+$color-primary: #ff0101;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+body {
+  width: 100%;
+  padding: 40px 100px;
+}
+li {
+  list-style-type: none;
+}
