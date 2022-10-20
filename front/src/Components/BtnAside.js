@@ -6,7 +6,6 @@ const BtnAside = (props) => {
   useEffect(() => {
     setIcons(props);
   }, [props]);
-  console.log(icons);
   return (
     <div className="aside__menu__btn">
       <img className="aside__menu__btn--img" src={icons?.pics} alt="Bouton" />
