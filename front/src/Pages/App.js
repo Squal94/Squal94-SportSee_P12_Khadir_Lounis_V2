@@ -8,7 +8,7 @@ import Nav from "../Components/Nav";
 const App = () => {
   return (
     <BrowserRouter>
-      <Data id={"18"} extens={"performance"} />
+      <Data id={"18"} extens={"activity"} />
       <Nav />
       <div className="miseEnPage">
         <Aside />

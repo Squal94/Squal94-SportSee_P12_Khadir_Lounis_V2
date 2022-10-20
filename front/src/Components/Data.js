@@ -34,7 +34,7 @@ const Data = (props) => {
     fetchData(getRender);
   }, [getRender]);
 
-  return <div> {console.log(data.data)}</div>;
+  return <div> {console.log(data)}</div>;
 };
 
 export default Data;

@@ -1,4 +1,5 @@
 import React from "react";
+import ActivitéQ from "./modules/ActivitéQ";
 
 const Main = () => {
   return (
@@ -10,6 +11,7 @@ const Main = () => {
         <p className="main__title--comment">
           Félicitation ! Vous avez explosé vos objectifs hier 👏
         </p>
+        <ActivitéQ />
       </div>
     </main>
   );
