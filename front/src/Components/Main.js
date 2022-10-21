@@ -1,5 +1,8 @@
 import React from "react";
-import ActivitéQ from "./modules/ActivitéQ";
+import ActivitéQ from "./modulesMain/ActivitéQ";
+import DuréeG from "./modulesMain/DuréeG";
+import Intensite from "./modulesMain/Intensite";
+// import Score from "./modules/Score";
 
 const Main = () => {
   return (
@@ -12,6 +15,9 @@ const Main = () => {
           Félicitation ! Vous avez explosé vos objectifs hier 👏
         </p>
         <ActivitéQ />
+        <DuréeG />
+        <Intensite />
+        {/* <Score /> */}
       </div>
     </main>
   );

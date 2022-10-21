@@ -77,7 +77,8 @@ const ActivitéQ = () => {
       <Tooltip
         labelStyle={{ color: "green" }}
         itemStyle={{ color: "cyan" }}
-        wrapperStyle={{ backgroundColor: "red" }}
+        //wrapperStyle={{ backgroundColor: "red" }}
+        style={{ backgroundColor: "red" }}
       />
       <Legend
         layout="horizontal"
