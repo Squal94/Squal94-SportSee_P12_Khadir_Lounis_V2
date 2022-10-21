@@ -79,7 +79,12 @@ const ActivitéQ = () => {
         itemStyle={{ color: "cyan" }}
         wrapperStyle={{ backgroundColor: "red" }}
       />
-      <Legend />
+      <Legend
+        layout="horizontal"
+        wrapperStyle={{ top: 15, right: -100 }}
+        iconType="circle"
+        iconSize={8}
+      />
       <Bar
         dataKey="kilogram"
         fill="#282D30"
