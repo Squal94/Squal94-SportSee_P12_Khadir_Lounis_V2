@@ -28,13 +28,14 @@ const Data = (props) => {
         setData(res);
       })
       .catch((err) => console.log(err));
-    console.log(value);
+    //console.log(value);
   };
   useEffect(() => {
     fetchData(getRender);
   }, [getRender]);
 
-  return <div> {console.log(data)}</div>;
+  // return <div> {console.log(data)}</div>;
+  return <div></div>;
 };
 
 export default Data;

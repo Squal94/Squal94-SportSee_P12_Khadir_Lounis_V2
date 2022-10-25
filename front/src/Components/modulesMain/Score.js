@@ -123,6 +123,7 @@ import {
   RadialBar,
   Legend,
   ResponsiveContainer,
+  PolarAngleAxis,
 } from "recharts";
 
 const Score = () => {
@@ -150,24 +151,37 @@ const Score = () => {
     transform: "translate(0, -50%)",
     lineHeight: "24px",
   };
-  const valuePourcentage = data[0].todayScore * 100;
-  console.log(valuePourcentage);
+  const valuePourcentage = [{ value: data[0].todayScore * 100 }];
+  // <PolarAngleAxis
+  //   type="number"
+  //   domain={[0, 100]}
+  //   angleAxisId={1}
+  //   tick={false}
+  // />;
+  // console.log(valuePourcentage);
   return (
     <ResponsiveContainer width="100%" height={400}>
       <RadialBarChart
-        cx="50%"
-        cy="50%"
         innerRadius="10%"
         outerRadius="80%"
+        startAngle={80}
+        endAngle={360 + 80}
         barSize={10}
-        data={data}
+        data={valuePourcentage}
       >
+        <circle cx="50%" cy="50%" fill="White" r="70"></circle>
+        <PolarAngleAxis
+          type="number"
+          domain={[0, 100]}
+          angleAxisId={0}
+          tick={false}
+        />
         <RadialBar
-          minAngle={15}
+          // minAngle={15}
           label={{ position: "insideStart", fill: "#fff" }}
           background
           clockWise
-          dataKey="todayScore"
+          dataKey="value"
         />
         <Legend
           iconSize={10}

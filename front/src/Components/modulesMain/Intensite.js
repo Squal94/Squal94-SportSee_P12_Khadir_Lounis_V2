@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable array-callback-return */
+import React, { useState } from "react";
 import {
   Radar,
   RadarChart,
@@ -45,28 +46,106 @@ const Intensite = () => {
       },
     ],
   };
+  const [newObject, setNewObject] = useState({});
+  let t;
+  let graphiqueEntrie = [];
+
+  function intensiteArray(object) {
+    t = [];
+    // let fonctNewOject = "";
+    // object.kind(subjects).map((value) => console.log(value));
+    for (const [key, value] of Object.entries(object.kind)) {
+      t.push(value);
+    }
+  }
+
+  function IntensiteObject(object) {
+    intensiteArray(object);
+    let n = 0;
+    graphiqueEntrie = [];
+    t.map((name) => {
+      const objectPush = { value: object.data[n].value, kind: name };
+      graphiqueEntrie.push(objectPush);
+      n++;
+    });
+  }
+  IntensiteObject(source);
+
   return (
     <RadarChart
+      margin={50}
       width={250}
       height={263}
       cx="50%"
       cy="50%"
       outerRadius="80%"
-      data={source.data}
-      dataKind={source.kind}
+      data={graphiqueEntrie}
+      style={{ backgroundColor: "#282D30" }}
     >
       <PolarGrid />
-      <PolarAngleAxis dataKey="dataKind" />
-      <PolarRadiusAxis />
-      <Radar
-        name="Mike"
-        dataKey="value"
-        stroke="#8884d8"
-        fill="#8884d8"
-        fillOpacity={0.6}
-      />
+      <PolarAngleAxis dataKey="kind" />
+      <PolarRadiusAxis stroke="t" />
+      <Radar dataKey="value" fill="#FF0101" fillOpacity={0.7} />
     </RadarChart>
   );
 };
 
 export default Intensite;
+
+// function intensiteObject(object) {
+//   let t = [];
+//   let n = 0;
+//   // let fonctNewOject = "";
+//   // object.kind(subjects).map((value) => console.log(value));
+//   for (const [key, value] of Object.entries(object.kind)) {
+//     t.push(value);
+//   }
+//   setNewObject(
+//     t.map((test) => {
+//       n = n++;
+//       const kn = new Map([[test, object.data[n].value]]);
+//       console.log(kn);
+//     })
+//   );
+// }
+// intensiteObject(source);
+
+//  function IntensiteObject(object) {
+//     intensiteArray(object);
+//     let n = 0;
+//     let kn = {};
+//     t.map((test) => {
+//       n = n++;
+//       let key = test
+//       kn = new Set();
+//       kn.add({ `${key} : object.data[n].value` });
+//     });
+//     console.log(kn);
+//   }
+
+// function IntensiteObject(object) {
+//   intensiteArray(object);
+//   let n = 0;
+//   let kn = {};
+//   t.map((test) => {
+//     n = n++;
+//     let newEntrie = new Object(  value : object.data[n].value);
+
+//     const returnedTarget = Object.assign(target, source);
+//   });
+//   console.log(kn);
+// }
+// IntensiteObject(source);
+
+// function IntensiteObject(object) {
+//   intensiteArray(object);
+//   let n = 0;
+//   graphiqueEntrie = [];
+//   t.map(() => {
+//     n = n++;
+//     const objectPush = { value: object.data[n].value, kind: test };
+//     graphiqueEntrie.push(objectPush);
+//   });
+// }
+// IntensiteObject(source);
+// console.log(graphiqueEntrie);

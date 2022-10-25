@@ -2,7 +2,7 @@ import React from "react";
 import ActivitéQ from "./modulesMain/ActivitéQ";
 import DuréeG from "./modulesMain/DuréeG";
 import Intensite from "./modulesMain/Intensite";
-// import Score from "./modules/Score";
+import Score from "./modulesMain/Score";
 
 const Main = () => {
   return (
@@ -17,7 +17,7 @@ const Main = () => {
         <ActivitéQ />
         <DuréeG />
         <Intensite />
-        {/* <Score /> */}
+        <Score />
       </div>
     </main>
   );

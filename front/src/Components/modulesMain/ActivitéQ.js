@@ -78,7 +78,8 @@ const ActivitéQ = () => {
         labelStyle={{ color: "green" }}
         itemStyle={{ color: "cyan" }}
         //wrapperStyle={{ backgroundColor: "red" }}
-        style={{ backgroundColor: "red" }}
+        //style={{ backgroundColor: "red" }}
+        contentStyle={{ backgroundColor: "red" }}
       />
       <Legend
         layout="horizontal"
