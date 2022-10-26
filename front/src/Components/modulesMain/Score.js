@@ -135,7 +135,7 @@ const Score = () => {
         lastName: "Dovineau",
         age: 31,
       },
-      todayScore: 0.12,
+      todayScore: 0.32,
       keyData: {
         calorieCount: 1930,
         proteinCount: 155,
@@ -144,32 +144,18 @@ const Score = () => {
       },
     },
   ];
-
-  const style = {
-    top: "50%",
-    right: 0,
-    transform: "translate(0, -50%)",
-    lineHeight: "24px",
-  };
   const valuePourcentage = [{ value: data[0].todayScore * 100 }];
-  // <PolarAngleAxis
-  //   type="number"
-  //   domain={[0, 100]}
-  //   angleAxisId={1}
-  //   tick={false}
-  // />;
-  // console.log(valuePourcentage);
   return (
-    <ResponsiveContainer width="100%" height={400}>
+    <ResponsiveContainer width={258} height={263}>
       <RadialBarChart
-        innerRadius="10%"
+        innerRadius="70%"
         outerRadius="80%"
-        startAngle={80}
-        endAngle={360 + 80}
-        barSize={10}
+        startAngle={170}
+        endAngle={360 + 170}
+        barSize={12}
         data={valuePourcentage}
+        style={{ backgroundColor: "#FBFBFB" }}
       >
-        <circle cx="50%" cy="50%" fill="White" r="70"></circle>
         <PolarAngleAxis
           type="number"
           domain={[0, 100]}
@@ -177,18 +163,44 @@ const Score = () => {
           tick={false}
         />
         <RadialBar
-          // minAngle={15}
-          label={{ position: "insideStart", fill: "#fff" }}
-          background
-          clockWise
+          cornerRadius={30 / 2}
           dataKey="value"
+          fill="#FF0000"
+          // background={{ fill: "#295049" }}
         />
-        <Legend
-          iconSize={10}
-          layout="vertical"
-          verticalAlign="middle"
-          wrapperStyle={style}
-        />
+        <text
+          x="50%"
+          y="45%"
+          fill="#282D30"
+          textAnchor="middle"
+          dominantBaseline="central"
+        >
+          <tspan fontSize="26" fontWeight={700}>
+            {`${data[0].todayScore * 100}%`}
+          </tspan>
+        </text>
+        <text
+          x="50%"
+          y="55%"
+          fill="#74798C"
+          textAnchor="middle"
+          dominantBaseline="central"
+        >
+          <tspan fontSize="16" fontWeight={500}>
+            de votre objectif
+          </tspan>
+        </text>
+        <text
+          x="15%"
+          y="15%"
+          fill="#282D30"
+          textAnchor="middle"
+          dominantBaseline="central"
+        >
+          <tspan fontSize="15" fontWeight={500}>
+            Score
+          </tspan>
+        </text>
       </RadialBarChart>
     </ResponsiveContainer>
   );

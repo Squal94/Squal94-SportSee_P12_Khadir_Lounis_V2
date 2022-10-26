@@ -6,7 +6,7 @@ import {
   PolarGrid,
   PolarAngleAxis,
   PolarRadiusAxis,
-  //   ResponsiveContainer,
+  // ResponsiveContainer,
 } from "recharts";
 
 const Intensite = () => {
@@ -47,15 +47,15 @@ const Intensite = () => {
     ],
   };
   const [newObject, setNewObject] = useState({});
-  let t;
+  let arrayTitle;
   let graphiqueEntrie = [];
 
   function intensiteArray(object) {
-    t = [];
+    arrayTitle = [];
     // let fonctNewOject = "";
     // object.kind(subjects).map((value) => console.log(value));
     for (const [key, value] of Object.entries(object.kind)) {
-      t.push(value);
+      arrayTitle.push(value);
     }
   }
 
@@ -63,7 +63,7 @@ const Intensite = () => {
     intensiteArray(object);
     let n = 0;
     graphiqueEntrie = [];
-    t.map((name) => {
+    arrayTitle.map((name) => {
       const objectPush = { value: object.data[n].value, kind: name };
       graphiqueEntrie.push(objectPush);
       n++;
@@ -73,18 +73,18 @@ const Intensite = () => {
 
   return (
     <RadarChart
-      margin={50}
-      width={250}
+      width={258}
       height={263}
       cx="50%"
       cy="50%"
-      outerRadius="80%"
+      outerRadius="60%"
       data={graphiqueEntrie}
       style={{ backgroundColor: "#282D30" }}
+      fill="#FFFFFF"
     >
       <PolarGrid />
-      <PolarAngleAxis dataKey="kind" />
-      <PolarRadiusAxis stroke="t" />
+      <PolarAngleAxis dataKey="kind" tick={{ fontSize: 12 }} />
+      <PolarRadiusAxis visibility={"hidden"} />
       <Radar dataKey="value" fill="#FF0101" fillOpacity={0.7} />
     </RadarChart>
   );
