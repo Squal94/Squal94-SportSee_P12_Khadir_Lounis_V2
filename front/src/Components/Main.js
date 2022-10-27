@@ -15,11 +15,27 @@ const Main = () => {
         <p className="main__title--comment">
           Félicitation ! Vous avez explosé vos objectifs hier 👏
         </p>
-        <ActivitéQ />
-        <DuréeG />
-        <Intensite />
-        <Score />
-        <KeyDataAffichage />
+      </div>
+      <div className="main__content">
+        <div className="main__content__graph">
+          <div className="main__content__graph--activite">
+            <ActivitéQ />
+          </div>
+          <div className="main__content__graph--others">
+            <div className="main__content__graph--others--margin">
+              <DuréeG />
+            </div>
+            <div className="main__content__graph--others--margin">
+              <Intensite />
+            </div>
+            <div className="main__content__graph--others--margin">
+              <Score />
+            </div>
+          </div>
+        </div>
+        <div className="main__content__keyData">
+          <KeyDataAffichage />
+        </div>
       </div>
     </main>
   );

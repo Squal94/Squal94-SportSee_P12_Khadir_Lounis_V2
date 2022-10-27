@@ -1,6 +1,7 @@
 .main {
   width: 100%;
   height: 1280px;
+
   &__title {
     margin-left: 107px;
     margin-top: 68px;
@@ -13,6 +14,29 @@
     &--comment {
       font-size: 18px;
       margin-top: 48px;
+      margin-bottom: 77px;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    &__graph {
+      // display: flex;
+      // flex-flow: row wrap;
+      &--activite {
+        width: 100%;
+        margin-left: 109px;
+        margin-right: 31px;
+      }
+      &--others {
+        display: flex;
+        flex-flow: row nowrap;
+        margin-left: 109px;
+        &--margin {
+          margin-right: 30px;
+        }
+      }
     }
   }
 }
