@@ -1,5 +1,5 @@
 /* eslint-disable array-callback-return */
-import React, { useState } from "react";
+import React from "react";
 import {
   Radar,
   RadarChart,
@@ -46,7 +46,7 @@ const Intensite = () => {
       },
     ],
   };
-  const [newObject, setNewObject] = useState({});
+  //const [newObject, setNewObject] = useState({});
   let arrayTitle;
   let graphiqueEntrie = [];
 
@@ -54,6 +54,7 @@ const Intensite = () => {
     arrayTitle = [];
     // let fonctNewOject = "";
     // object.kind(subjects).map((value) => console.log(value));
+    // eslint-disable-next-line no-unused-vars
     for (const [key, value] of Object.entries(object.kind)) {
       arrayTitle.push(value);
     }
@@ -91,61 +92,3 @@ const Intensite = () => {
 };
 
 export default Intensite;
-
-// function intensiteObject(object) {
-//   let t = [];
-//   let n = 0;
-//   // let fonctNewOject = "";
-//   // object.kind(subjects).map((value) => console.log(value));
-//   for (const [key, value] of Object.entries(object.kind)) {
-//     t.push(value);
-//   }
-//   setNewObject(
-//     t.map((test) => {
-//       n = n++;
-//       const kn = new Map([[test, object.data[n].value]]);
-//       console.log(kn);
-//     })
-//   );
-// }
-// intensiteObject(source);
-
-//  function IntensiteObject(object) {
-//     intensiteArray(object);
-//     let n = 0;
-//     let kn = {};
-//     t.map((test) => {
-//       n = n++;
-//       let key = test
-//       kn = new Set();
-//       kn.add({ `${key} : object.data[n].value` });
-//     });
-//     console.log(kn);
-//   }
-
-// function IntensiteObject(object) {
-//   intensiteArray(object);
-//   let n = 0;
-//   let kn = {};
-//   t.map((test) => {
-//     n = n++;
-//     let newEntrie = new Object(  value : object.data[n].value);
-
-//     const returnedTarget = Object.assign(target, source);
-//   });
-//   console.log(kn);
-// }
-// IntensiteObject(source);
-
-// function IntensiteObject(object) {
-//   intensiteArray(object);
-//   let n = 0;
-//   graphiqueEntrie = [];
-//   t.map(() => {
-//     n = n++;
-//     const objectPush = { value: object.data[n].value, kind: test };
-//     graphiqueEntrie.push(objectPush);
-//   });
-// }
-// IntensiteObject(source);
-// console.log(graphiqueEntrie);

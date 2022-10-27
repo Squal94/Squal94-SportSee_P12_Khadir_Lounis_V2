@@ -5,9 +5,9 @@ import {
   XAxis,
   YAxis,
   //   CartesianGrid,
-  //   ResponsiveContainer,
+  //ResponsiveContainer,
   Tooltip,
-  Legend,
+  // Legend,
 } from "recharts";
 
 const DuréeG = () => {
@@ -42,32 +42,50 @@ const DuréeG = () => {
     },
   ];
   return (
-    <LineChart
-      width={358}
-      height={263}
-      data={data}
-      style={{ backgroundColor: "red" }}
-      //   wrapperStyle={{ backgroundColor: "red" }}
-      //   fill="#E60000"
-    >
-      <XAxis dataKey="day" width={"100%"} stroke="hidden" />
-      <YAxis visibility={"hidden"} />
-      <Tooltip />
-      <Legend />
-      {/* <Line
-        type="monotone"
-        dataKey="day"
-        stroke="#8884d8"
-        activeDot={{ r: 8 }}
-      />
-      <Line type="monotone" dataKey="sessionLength" stroke="#82ca9d" /> */}
-      <Line
-        type="monotone"
-        dataKey="sessionLength"
-        stroke="white"
-        strokeWidth={2}
-      />
-    </LineChart>
+    <div className="containerDuree">
+      <text
+        x="20%"
+        y="20%"
+        fill="#FF7171"
+        fontWeight={500}
+        fontSize={15}
+        textAnchor="start"
+        // dominantBaseline="start"
+        className="containerDuree__title"
+      >
+        <tspan>
+          Durée moyenne des <br />
+          sessions
+        </tspan>
+      </text>
+      <LineChart
+        className="containerDuree__graph"
+        width={369}
+        height={163}
+        data={data}
+        style={{ backgroundColor: "red" }}
+      >
+        <XAxis dataKey="day" width={"100%"} visibility={"hidden"} />
+        <YAxis visibility={"hidden"} />
+        <Tooltip />
+        <Line
+          type="monotone"
+          dataKey="sessionLength"
+          stroke="white"
+          strokeWidth={2}
+          dot={false}
+        />
+      </LineChart>
+      <div className="containerDuree__week">
+        <p>L</p>
+        <p>M</p>
+        <p>M</p>
+        <p>J</p>
+        <p>V</p>
+        <p>S</p>
+        <p>D</p>
+      </div>
+    </div>
   );
 };
 

@@ -1,0 +1,35 @@
+.containerDuree {
+  width: 258px;
+  height: 263px;
+  overflow: hidden;
+  position: relative;
+  background-color: #ff0000;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  &__title {
+    position: absolute;
+    color: #ff7171;
+    font-size: 15px;
+    top: 40px;
+    left: 40px;
+  }
+  &__graph {
+    position: absolute;
+    bottom: 20px;
+    left: -70px;
+  }
+  &__week {
+    width: 100%;
+    color: #ff7171;
+    font-size: 12px;
+    font-weight: 500;
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 20px;
+  }
+}
