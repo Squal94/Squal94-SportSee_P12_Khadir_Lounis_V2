@@ -1,4 +1,5 @@
 import React from "react";
+import ModuleKeyData from "./ModuleKeyData";
 
 const KeyDataAffichage = () => {
   const dataKey = [
@@ -18,7 +19,17 @@ const KeyDataAffichage = () => {
       },
     },
   ];
-  return <div className="containerKeyData"></div>;
+  return (
+    <div className="containerKeyData">
+      <ModuleKeyData object={dataKey[0].keyData.calorieCount} flag="calorie" />
+      <ModuleKeyData object={dataKey[0].keyData.proteinCount} flag="proteine" />
+      <ModuleKeyData
+        object={dataKey[0].keyData.carbohydrateCount}
+        flag="glucide"
+      />
+      <ModuleKeyData object={dataKey[0].keyData.lipidCount} flag="lipide" />
+    </div>
+  );
 };
 
 export default KeyDataAffichage;

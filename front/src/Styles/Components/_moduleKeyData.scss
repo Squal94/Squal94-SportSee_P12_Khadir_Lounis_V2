@@ -1,0 +1,31 @@
+.containerModule {
+  width: 258px;
+  height: 124px;
+  border-radius: 5px;
+  background-color: #fbfbfb;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  &__flag {
+    width: 60px;
+    height: 60px;
+  }
+  &__data {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    &--value {
+      margin: 2px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    &--txt {
+      margin: 2px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #74798c;
+    }
+  }
+}

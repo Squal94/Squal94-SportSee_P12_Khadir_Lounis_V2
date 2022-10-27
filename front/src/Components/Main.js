@@ -2,6 +2,7 @@ import React from "react";
 import ActivitéQ from "./modulesMain/ActivitéQ";
 import DuréeG from "./modulesMain/DuréeG";
 import Intensite from "./modulesMain/Intensite";
+import KeyDataAffichage from "./modulesMain/KeyDataAffichage";
 import Score from "./modulesMain/Score";
 
 const Main = () => {
@@ -18,6 +19,7 @@ const Main = () => {
         <DuréeG />
         <Intensite />
         <Score />
+        <KeyDataAffichage />
       </div>
     </main>
   );
