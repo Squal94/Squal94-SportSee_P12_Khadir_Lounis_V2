@@ -11,6 +11,15 @@ import {
 } from "recharts";
 
 const DuréeG = () => {
+  function CustomTooltip({ active, payload }) {
+    if (active) {
+      return (
+        <div className="tooltipDureeG">
+          <p>{payload[0].value} min </p>
+        </div>
+      );
+    }
+  }
   const data = [
     {
       day: 1,
@@ -43,21 +52,10 @@ const DuréeG = () => {
   ];
   return (
     <div className="containerDuree">
-      <text
-        x="20%"
-        y="20%"
-        fill="#FF7171"
-        fontWeight={500}
-        fontSize={15}
-        textAnchor="start"
-        // dominantBaseline="start"
-        className="containerDuree__title"
-      >
-        <tspan>
-          Durée moyenne des <br />
-          sessions
-        </tspan>
-      </text>
+      <h1 className="containerDuree__title">
+        Durée moyenne des <br />
+        sessions
+      </h1>
       <LineChart
         className="containerDuree__graph"
         width={369}
@@ -67,7 +65,10 @@ const DuréeG = () => {
       >
         <XAxis dataKey="day" width={"100%"} visibility={"hidden"} />
         <YAxis visibility={"hidden"} />
-        <Tooltip />
+        <Tooltip
+          content={<CustomTooltip />}
+          wrapperStyle={{ outline: "none" }}
+        />
         <Line
           type="monotone"
           dataKey="sessionLength"

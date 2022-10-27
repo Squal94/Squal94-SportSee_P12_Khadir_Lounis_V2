@@ -10,6 +10,16 @@ import {
 } from "recharts";
 
 const ActivitéQ = () => {
+  function CustomTooltip({ active, payload }) {
+    if (active) {
+      return (
+        <div className="tooltipActivite">
+          <p>{payload[0].value}kg </p>
+          <p>{payload[1].value}Kcal </p>
+        </div>
+      );
+    }
+  }
   const data = [
     {
       day: "2020-07-01",
@@ -75,11 +85,10 @@ const ActivitéQ = () => {
       <XAxis dataKey="day" />
       <YAxis orientation="right" />
       <Tooltip
-        labelStyle={{ color: "green" }}
-        itemStyle={{ color: "cyan" }}
-        //wrapperStyle={{ backgroundColor: "red" }}
-        //style={{ backgroundColor: "red" }}
+        content={<CustomTooltip />}
+        itemStyle={{ color: "white" }}
         contentStyle={{ backgroundColor: "red" }}
+        wrapperStyle={{ outline: "none" }}
       />
       <Legend
         layout="horizontal"
