@@ -24,7 +24,11 @@
     &__graph {
       // display: flex;
       // flex-flow: row wrap;
+
       &--activite {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         margin-left: 109px;
         margin-right: 31px;
@@ -33,6 +37,7 @@
         display: flex;
         flex-flow: row nowrap;
         margin-left: 109px;
+        margin-top: 28px;
         &--margin {
           margin-right: 30px;
         }

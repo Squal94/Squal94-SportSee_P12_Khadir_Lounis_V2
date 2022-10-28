@@ -14,11 +14,26 @@ const Data = (props) => {
   }, [props]);
 
   useEffect(() => {
-    if (props.extens) {
-      getRender = `http://localhost:3000/user/${userId}/${extension}`;
-    } else {
+    if (
+      (props.id && props.id === "18" && !props.extens) ||
+      (props.id && props.id === "12" && !props.extens)
+    ) {
       getRender = `http://localhost:3000/user/${userId}`;
+    } else if (
+      (props.id && props.id === "18" && props.extens) ||
+      (props.id && props.id === "12" && props.extens)
+    ) {
+      if (
+        (props.extens && props.extens === "activity") ||
+        (props.extens && props.extens === "average-sessions") ||
+        (props.extens && props.extens === "performance")
+      ) {
+        getRender = `http://localhost:3000/user/${userId}/${extension}`;
+      } else {
+        console.log("erreur");
+      }
     }
+    console.log(getRender);
   }, [props]);
 
   const fetchData = (value) => {
@@ -34,7 +49,17 @@ const Data = (props) => {
     fetchData(getRender);
   }, [getRender]);
 
-  return <div> {console.log(data)}</div>;
+  return <div></div>;
 };
 
 export default Data;
+
+// if (
+//         (props.extens && props.extens === "activity") ||
+//         (props.extens && props.extens === "average-sessions") ||
+//         (props.extens && props.extens === "performance")
+//       ) {
+//         getRender = `http://localhost:3000/user/${userId}/${extension}`;
+//       } else {
+//         console.log("erreur");
+//       }

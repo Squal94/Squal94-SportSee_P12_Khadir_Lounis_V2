@@ -69,6 +69,7 @@ const ActivitéQ = () => {
         left: 20,
         bottom: 5,
       }}
+      style={{ backgroundColor: "#FBFBFB" }}
     >
       <text
         x={132}
