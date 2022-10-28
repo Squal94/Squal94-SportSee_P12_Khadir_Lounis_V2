@@ -6,8 +6,8 @@ import Main from "../Components/Main";
 import Nav from "../Components/Nav";
 
 const Profile = () => {
-  //   const params = useParams();
-  //   console.log(params);
+  const params = useParams();
+  console.log(params);
   return (
     <div>
       <Data id={"18"} extens={"activity"} />

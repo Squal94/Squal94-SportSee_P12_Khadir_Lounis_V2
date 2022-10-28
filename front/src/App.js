@@ -1,13 +1,16 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Profile from "./Pages/Profile";
+import D404 from "./Pages/D404";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Profile />} />
+        <Route path="/user" element={<Profile />} />
         <Route path="/user/:id" element={<Profile />} />
+        <Route path="*" element={<D404 />} />
       </Routes>
       <Profile />
     </BrowserRouter>
