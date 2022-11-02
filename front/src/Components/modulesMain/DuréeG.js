@@ -10,7 +10,8 @@ import {
   // Legend,
 } from "recharts";
 
-const DuréeG = () => {
+const DuréeG = (props) => {
+  let mock = props.data?.sessions;
   function CustomTooltip({ active, payload }) {
     if (active) {
       return (
@@ -20,36 +21,7 @@ const DuréeG = () => {
       );
     }
   }
-  const data = [
-    {
-      day: 1,
-      sessionLength: 30,
-    },
-    {
-      day: 2,
-      sessionLength: 23,
-    },
-    {
-      day: 3,
-      sessionLength: 45,
-    },
-    {
-      day: 4,
-      sessionLength: 50,
-    },
-    {
-      day: 5,
-      sessionLength: 0,
-    },
-    {
-      day: 6,
-      sessionLength: 0,
-    },
-    {
-      day: 7,
-      sessionLength: 60,
-    },
-  ];
+
   return (
     <div className="containerDuree">
       <h1 className="containerDuree__title">
@@ -60,7 +32,7 @@ const DuréeG = () => {
         className="containerDuree__graph"
         width={369}
         height={163}
-        data={data}
+        data={mock}
         style={{ backgroundColor: "red" }}
       >
         <XAxis dataKey="day" width={"100%"} visibility={"hidden"} />

@@ -10,9 +10,9 @@ const App = () => {
         <Route path="/" element={<Profile />} />
         <Route path="/user" element={<Profile />} />
         <Route path="/user/:id" element={<Profile />} />
+        <Route path="/user/:id/:extens" element={<Profile />} />
         <Route path="*" element={<D404 />} />
       </Routes>
-      <Profile />
     </BrowserRouter>
   );
 };
