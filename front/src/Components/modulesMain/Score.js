@@ -54,7 +54,7 @@ const Score = (props) => {
           dominantBaseline="central"
         >
           <tspan fontSize="26" fontWeight={700}>
-            {result}
+            {result}%
           </tspan>
         </text>
         <text

@@ -45,7 +45,9 @@ const Main = () => {
           </div>
         </div>
         <div className="main__content__keyData">
-          <KeyDataAffichage />
+          <KeyDataAffichage
+            data={Data(`http://localhost:3000/user/${userId}`)}
+          />
         </div>
       </div>
     </main>
