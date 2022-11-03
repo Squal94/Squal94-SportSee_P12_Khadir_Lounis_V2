@@ -18,14 +18,11 @@ const Intensite = (props) => {
     } else {
       Object.keys(monObjet).map((i) => arrayTitle.push(monObjet[i]));
     }
-    console.log(arrayTitle);
   }
-
-  arraykind();
 
   function IntensiteObject(object) {
     let graphiqueEntrie = [];
-    arraykind(object);
+    arraykind();
     let n = 0;
     arrayTitle.map((name) => {
       const objectPush = { value: object?.data.data[n].value, kind: name };
@@ -34,8 +31,6 @@ const Intensite = (props) => {
     });
     return graphiqueEntrie;
   }
-
-  console.log(IntensiteObject(props));
 
   if (IntensiteObject(props).length === 0) {
   } else {

@@ -40,7 +40,7 @@ const Main = () => {
               />
             </div>
             <div className="main__content__graph--others--margin">
-              <Score />
+              <Score data={Data(`http://localhost:3000/user/${userId}`)} />
             </div>
           </div>
         </div>
