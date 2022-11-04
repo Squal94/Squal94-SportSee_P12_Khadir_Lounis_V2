@@ -2,6 +2,12 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+/**
+ * Function Data
+ * @param {url} url specify the end point to be used to retrieve data from the api
+ * Allow when called, as well as the relevant end point to mock the desired data
+ */
+
 function Data(url) {
   const [userData, setUserData] = useState();
 

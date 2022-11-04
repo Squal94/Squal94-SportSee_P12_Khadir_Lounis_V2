@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import Data from "./Data";
+import { useNavigate, useParams } from "react-router-dom";
+import Data from "./../Assets/Import/Data";
 import ActivitéQ from "./modulesMain/ActivitéQ";
 import DuréeG from "./modulesMain/DuréeG";
 import HeaderMain from "./modulesMain/HeaderMain";
