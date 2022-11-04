@@ -2,7 +2,11 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "./../Assets/img/Logo_SportSee.png";
 
-// Composant de la navigation
+/**
+ * Component Nav
+ * Allows to create the navigation menu as well as are contained (logo, button, links ).
+ *
+ */
 
 const Nav = () => {
   return (

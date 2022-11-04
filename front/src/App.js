@@ -3,6 +3,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Profile from "./Pages/Profile";
 import D404 from "./Pages/D404";
 
+/**
+ * Component App
+ * Component App Generates a router that redirects pages according to entries
+ */
+
 const App = () => {
   return (
     <BrowserRouter>

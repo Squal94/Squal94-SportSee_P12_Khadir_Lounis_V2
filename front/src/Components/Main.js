@@ -8,6 +8,12 @@ import Intensite from "./modulesMain/Intensite";
 import KeyDataAffichage from "./modulesMain/KeyDataAffichage";
 import Score from "./modulesMain/Score";
 
+/**
+ * Component Main
+ * Acts as a container for calling other components as well and for their layout
+ *
+ */
+
 const Main = () => {
   const params = useParams();
   const [userId, setUserId] = useState(18);

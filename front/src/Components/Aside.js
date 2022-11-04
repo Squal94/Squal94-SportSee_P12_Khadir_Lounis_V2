@@ -6,7 +6,17 @@ import poid from "./../Assets/img/poids.png";
 import copyright from "./../Assets/img/copyright.png";
 import BtnAside from "./BtnAside";
 
+/**
+ * Component Aside
+ * Component which allows to create the sidebar of the site
+ */
+
 const Aside = () => {
+  /**
+   * Array Btn Aside
+   * This Array allows a loop to dynamically create the aside buttons
+   */
+
   const btn_aside = [zen, nage, velo, poid];
   let n = 0;
 
