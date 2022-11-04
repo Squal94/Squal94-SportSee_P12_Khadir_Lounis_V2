@@ -28,9 +28,8 @@ const Intensite = (props) => {
    */
   function arraykind() {
     arrayTitle = [];
-    if (mock?.kind === undefined) {
-    } else {
-      Object.keys(mock?.kind).map((i) => arrayTitle.push(mock?.kind[i]));
+    if (mock?.kind !== undefined) {
+      Object.keys(mock.kind).map((i) => arrayTitle.push(mock.kind[i]));
     }
   }
 
@@ -50,8 +49,7 @@ const Intensite = (props) => {
     return graphiqueEntrie;
   }
 
-  if (IntensiteObject(props).length === 0) {
-  } else {
+  if (IntensiteObject(props).length !== 0) {
     return (
       <RadarChart
         width={258}
