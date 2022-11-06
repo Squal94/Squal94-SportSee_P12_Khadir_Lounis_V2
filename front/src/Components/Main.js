@@ -25,12 +25,6 @@ const Main = () => {
     }
   }, [params]);
 
-  // if (params.id) {
-  //   console.log("je suis la");
-  //   valueEntrie = Data(`${urlInit}${userId}`);
-  // } else {
-  //   valueEntrie = Data(`${urlInit}18`);
-  // }
   return (
     <main className="main">
       <HeaderMain data={Data(`${urlInit}${userId}`)} />
@@ -60,26 +54,3 @@ const Main = () => {
 };
 
 export default Main;
-
-// function initvalue(value) {
-//   const userData = Data(`http://localhost:3000/user/${userId}`);
-//   const userActivity = Data(`http://localhost:3000/user/${userId}/activity`);
-//   const userAverage = Data(
-//     `http://localhost:3000/user/${userId}/average-sessions`
-//   );
-//   const userPerformance = Data(
-//     `http://localhost:3000/user/${userId}/performance`
-//   );
-// }
-
-// const getId = (params) => {
-//   if (Data.USER_MAIN_DATA.find((data) => data.id === params.id)) {
-//     // const newAppartement = logements.find(
-//     //   (appart) => appart.id === appartementId
-//     // );
-//     // setAppartement(newAppartement);
-//   } else {
-//     navigate("/404");
-//   }
-// };
-// getId();

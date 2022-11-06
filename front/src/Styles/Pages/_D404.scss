@@ -1,0 +1,17 @@
+.container404 {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  &__title {
+    font-size: 64px;
+    color: $color-primary;
+    margin: 20px;
+  }
+  &__txt {
+    margin: 20px;
+    font-size: 32px;
+    color: $color-hover;
+  }
+}

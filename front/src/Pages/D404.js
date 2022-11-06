@@ -8,7 +8,10 @@ const D404 = () => {
       <Nav />
       <div className="miseEnPage">
         <Aside />
-        <h1>404</h1>
+        <div className="container404">
+          <h1 className="container404__title">404</h1>
+          <p className="container404__txt">cette page n'existe pas</p>
+        </div>
       </div>
     </div>
   );
