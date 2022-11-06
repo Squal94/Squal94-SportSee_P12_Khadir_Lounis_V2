@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 /**
  * Function Data
@@ -10,20 +11,29 @@ import axios from "axios";
 
 function Data(url) {
   const [userData, setUserData] = useState();
+  // const params = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchData(url);
   }, [url]);
 
   const fetchData = (value) => {
-    axios
-      .get(value)
-      .then((res) => {
-        setUserData(res);
-      })
-      .catch((err) => console.log(err));
+    if (value) {
+      axios
+        .get(value)
+        .then((res) => {
+          setUserData(res);
+        })
+        .catch((err) => {
+          console.log(err);
+          navigate("/404");
+        });
+    }
   };
-  return userData?.data.data;
+  if (userData) {
+    return userData?.data?.data;
+  }
 }
 
 export default Data;
@@ -93,3 +103,13 @@ export default Data;
 //       } else {
 //         console.log("erreur");
 //       }
+
+// if (res.data.data.id && res.data.data.id !== undefined) {
+//   // console.log(params.id);
+//   // eslint-disable-next-line eqeqeq
+//   if (params.id == res.data.data.id && res.data.data.id !== undefined) {
+//     console.log("je marche");
+//   } else {
+//     console.log("je marche pas");
+//   }
+// }

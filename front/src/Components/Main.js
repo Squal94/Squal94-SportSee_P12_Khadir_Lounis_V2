@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Data from "../Services/Data";
 import ActivitéQ from "./modulesMain/ActivitéQ";
 import DuréeG from "./modulesMain/DuréeG";
@@ -15,45 +15,44 @@ import Score from "./modulesMain/Score";
  */
 
 const Main = () => {
+  const urlInit = "http://localhost:3000/user/";
   const params = useParams();
   const [userId, setUserId] = useState(18);
 
   useEffect(() => {
-    setUserId(params.id);
+    if (params.id !== undefined) {
+      setUserId(params.id);
+    }
   }, [params]);
 
+  // if (params.id) {
+  //   console.log("je suis la");
+  //   valueEntrie = Data(`${urlInit}${userId}`);
+  // } else {
+  //   valueEntrie = Data(`${urlInit}18`);
+  // }
   return (
     <main className="main">
-      <HeaderMain data={Data(`http://localhost:3000/user/${userId}`)} />
+      <HeaderMain data={Data(`${urlInit}${userId}`)} />
       <div className="main__content">
         <div className="main__content__graph">
           <div className="main__content__graph--activite">
-            <ActivitéQ
-              data={Data(`http://localhost:3000/user/${userId}/activity`)}
-            />
+            <ActivitéQ data={Data(`${urlInit}${userId}/activity`)} />
           </div>
           <div className="main__content__graph--others">
             <div className="main__content__graph--others--margin">
-              <DuréeG
-                data={Data(
-                  `http://localhost:3000/user/${userId}/average-sessions`
-                )}
-              />
+              <DuréeG data={Data(`${urlInit}${userId}/average-sessions`)} />
             </div>
             <div className="main__content__graph--others--margin">
-              <Intensite
-                data={Data(`http://localhost:3000/user/${userId}/performance`)}
-              />
+              <Intensite data={Data(`${urlInit}${userId}/performance`)} />
             </div>
             <div className="main__content__graph--others--margin">
-              <Score data={Data(`http://localhost:3000/user/${userId}`)} />
+              <Score data={Data(`${urlInit}${userId}`)} />
             </div>
           </div>
         </div>
         <div className="main__content__keyData">
-          <KeyDataAffichage
-            data={Data(`http://localhost:3000/user/${userId}`)}
-          />
+          <KeyDataAffichage data={Data(`${urlInit}${userId}`)} />
         </div>
       </div>
     </main>
