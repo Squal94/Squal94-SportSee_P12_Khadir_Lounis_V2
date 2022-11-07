@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  RadialBarChart,
-  RadialBar,
-  //Legend,
-  //ResponsiveContainer,
-  PolarAngleAxis,
-} from "recharts";
+import { RadialBarChart, RadialBar, PolarAngleAxis } from "recharts";
 
 /**
  * Component Score
