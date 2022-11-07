@@ -26,6 +26,9 @@ if you don't have yarn you can't install it, after install of npm with :
 
 `npm i -g yarn `
 
+if you want to change the port of the backend you just need to change  
+the const urlInit in the Main component
+
 ## 3.Install packages and library for this application
 
 For different libraries you must :
@@ -38,29 +41,14 @@ For different libraries you must :
 
     `npm init `
 
-    3. install create react app :
+    3. libary use for the project :
+      -  create react app
+      -  react router dom
+      -  sass
+      -  axios
+      -  recharts
 
-    `npx create-react-app (name of project) `
-
-    this step is for the programmer
-
-    4. For use react router dom:
-
-    `npm i react-router-dom `
-
-    5. For the style of this application you need to install sass:
-
-    `npm i sass `
-
-    6. For importing data from the api i use Axios:
-
-    `npm i Axios `
-
-    7. And for the generation of the charts i use Recharts:
-
-    `npm i recharts `
-
-This is all the package and library use for the proper operation of this project.
+      This is all the package and library use for the proper operation of this project.
 
 ## 4.Start the project
 
@@ -82,8 +70,8 @@ that you can consult by changing URL:
 
 - Cecilia user (18) url :
 
-`http://localhost:3001/user/18`
+`http://localhost:(port use example 3001)/user/18`
 
 - Karl user (12) url :
 
-`http://localhost:3001/user/12`
+`http://localhost:(port use example 3001)/user/12`
