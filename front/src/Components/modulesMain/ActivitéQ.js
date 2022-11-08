@@ -60,8 +60,8 @@ const ActivitéQ = (activiteData) => {
         </tspan>
       </text>
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="day" />
-      <YAxis orientation="right" />
+      <XAxis dataKey={"day".charAt(5)} dy={15} />
+      <YAxis orientation="right" dx={15} />
       <Tooltip
         content={<CustomTooltip />}
         itemStyle={{ color: "white" }}

@@ -6,6 +6,7 @@ import {
   PolarGrid,
   PolarAngleAxis,
   PolarRadiusAxis,
+  Text,
 } from "recharts";
 
 /**
@@ -51,11 +52,25 @@ const Intensite = (dataIntensite) => {
   }
 
   if (IntensiteObject(dataIntensite).length !== 0) {
+    function renderPolarAngleAxis({ payload, x, y, cx, cy, ...rest }) {
+      return (
+        <Text
+          {...rest}
+          verticalAnchor="middle"
+          alignmentBaseline="right"
+          y={y + (y - cy) / 16}
+          x={x + (x - cx) / 16}
+          fontSize="12px"
+        >
+          {payload.value}
+        </Text>
+      );
+    }
     return (
       <RadarChart
         width={258}
         height={263}
-        cx="50%"
+        cx="48%"
         cy="50%"
         outerRadius="60%"
         data={IntensiteObject(dataIntensite)}
@@ -63,7 +78,10 @@ const Intensite = (dataIntensite) => {
         fill="#FFFFFF"
       >
         <PolarGrid />
-        <PolarAngleAxis dataKey="kind" tick={{ fontSize: 12 }} />
+        <PolarAngleAxis
+          dataKey="kind"
+          tick={(props) => renderPolarAngleAxis(props)}
+        />
         <PolarRadiusAxis visibility={"hidden"} />
         <Radar dataKey="value" fill="#FF0101" fillOpacity={0.7} />
       </RadarChart>

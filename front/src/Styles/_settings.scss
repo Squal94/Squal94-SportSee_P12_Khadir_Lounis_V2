@@ -32,3 +32,9 @@ body {
 li {
   list-style-type: none;
 }
+
+.recharts-polar-angle-axis-tick {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
