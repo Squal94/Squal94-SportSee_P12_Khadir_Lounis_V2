@@ -9,3 +9,27 @@
   align-items: center;
   font-size: 8px;
 }
+
+.barChartContainer {
+  width: 835px;
+  height: 320px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #fbfbfb;
+  position: relative;
+  &__title {
+    font-size: 15px;
+    font-weight: 600;
+    position: absolute;
+    top: 12px;
+    left: 50px;
+  }
+}
+
+// .legendContainer {
+//   &__form{
+
+//   }
+
+// }
