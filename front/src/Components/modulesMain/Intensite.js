@@ -24,7 +24,8 @@ const Intensite = (dataIntensite) => {
 
   /**
    * Function arraykind
-   * is the data transformation function to create arrayTitle with the name of title for  PolarAngleAxis
+   * is the data transformation function to create arrayTitle with the name of title for PolarAngleAxis
+   * and shows the type of activity carried out in the form of a radar chart.
    */
   function arraykind() {
     arrayTitle = [];
@@ -35,7 +36,7 @@ const Intensite = (dataIntensite) => {
 
   /**
    * Function IntensiteObject
-   * is the data transformation function to create  the input for the graph data
+   * is the data transformation function to create  the input of the radar chart,and shows the type of activity carried out in the form .
    */
   function IntensiteObject(object) {
     let graphiqueEntrie = [];
