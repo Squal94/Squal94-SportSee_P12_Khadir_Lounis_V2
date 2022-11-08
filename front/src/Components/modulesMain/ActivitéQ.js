@@ -51,12 +51,17 @@ const ActivitéQ = (activiteData) => {
         style={{ backgroundColor: "#FBFBFB" }}
       >
         <CartesianGrid
-          strokeDasharray="3 3"
+          strokeDasharray="2 2"
           horizontal={true}
           vertical={false}
         />
-        <XAxis dataKey={"day".charAt(5)} dy={15} axisLine={false} />
-        <YAxis orientation="right" dx={15} axisLine={false} />
+        <XAxis
+          dataKey={"day".charAt(5)}
+          dy={15}
+          axisLine={false}
+          tickLine={false}
+        />
+        <YAxis orientation="right" dx={15} axisLine={false} tickLine={false} />
         <Tooltip
           content={<CustomTooltip />}
           itemStyle={{ color: "white" }}
