@@ -5,7 +5,7 @@ import Nav from "../Components/Nav";
 
 const Profile = () => {
   return (
-    <div>
+    <div className="profile">
       <Nav />
       <div className="miseEnPage">
         <Aside />
