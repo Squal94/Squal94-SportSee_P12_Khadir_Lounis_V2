@@ -67,6 +67,8 @@ const ActivitéQ = (activiteData) => {
           itemStyle={{ color: "white" }}
           contentStyle={{ backgroundColor: "red" }}
           wrapperStyle={{ outline: "none" }}
+          // cursor={{ backgroundColor: "#C4C4C4AB" }}
+          cursor={{ fill: "#C4C4C4AB" }}
         />
         <Legend
           // content={renderLegend}

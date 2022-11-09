@@ -1,5 +1,5 @@
 import React from "react";
-import { LineChart, Line, XAxis, YAxis, Tooltip } from "recharts";
+import { LineChart, Line, XAxis, YAxis, Tooltip, Rectangle } from "recharts";
 
 /**
  * Component DuréeG
@@ -26,6 +26,22 @@ const DuréeG = (dureeData) => {
     }
   }
 
+  const CustomCursor = (props) => {
+    const { points, width } = props;
+    const { x, y } = points[0];
+
+    return (
+      <Rectangle
+        fill="#000000"
+        fillOpacity={0.1}
+        x={x}
+        y={y}
+        width={width}
+        height={463}
+      />
+    );
+  };
+
   return (
     <div className="containerDuree">
       <h1 className="containerDuree__title">
@@ -35,15 +51,17 @@ const DuréeG = (dureeData) => {
       <LineChart
         className="containerDuree__graph"
         width={369}
-        height={163}
+        height={268}
         data={mock}
         style={{ backgroundColor: "red" }}
       >
         <XAxis dataKey="day" width={"100%"} visibility={"hidden"} />
-        <YAxis visibility={"hidden"} />
+        <YAxis visibility={"hidden"} domain={[15, 100]} />
         <Tooltip
           content={<CustomTooltip />}
           wrapperStyle={{ outline: "none" }}
+          // cursor={{ stroke: "#000000", strokeWidth: 55, strokeOpacity: 50 }}
+          cursor={<CustomCursor />}
         />
         <Line
           type="monotone"
