@@ -60,7 +60,6 @@ const DuréeG = (dureeData) => {
         <Tooltip
           content={<CustomTooltip />}
           wrapperStyle={{ outline: "none" }}
-          // cursor={{ stroke: "#000000", strokeWidth: 55, strokeOpacity: 50 }}
           cursor={<CustomCursor />}
         />
         <Line

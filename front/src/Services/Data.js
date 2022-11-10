@@ -11,7 +11,6 @@ import { useNavigate } from "react-router-dom";
 
 function Data(url) {
   const [userData, setUserData] = useState();
-  // const params = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {

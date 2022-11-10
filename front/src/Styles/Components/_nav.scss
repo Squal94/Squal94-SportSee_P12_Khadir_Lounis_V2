@@ -36,36 +36,3 @@
     }
   }
 }
-
-// Effet de soulignement a la valeur de la navigation sélectionnée
-//       &--active {
-//         position: relative;
-
-//         &::after {
-//           content: "";
-//           height: 2px;
-//           width: 0;
-//           background: $color-primary;
-//           position: absolute;
-//           bottom: 0px;
-//           left: 50%;
-//           transform: translateX(-50%);
-//           -webkit-animation: anim 0.3s ease forwards;
-//           animation: anim 0.6s ease forwards;
-
-//           //Ajout de l'animation au soulignement
-//           @-webkit-keyframes anim {
-//             to {
-//               width: 100%;
-//             }
-//           }
-//           @keyframes anim {
-//             to {
-//               width: 100%;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }

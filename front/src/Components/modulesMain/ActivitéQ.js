@@ -101,17 +101,3 @@ const ActivitéQ = (activiteData) => {
 };
 
 export default ActivitéQ;
-
-// const renderLegend = (props) => {
-//   const { payload } = props;
-
-//   return (
-//     <ul className="legendContainer">
-//       {payload.map((entry, index) => (
-//         <li className="legendContainer__form" key={`item-${index}`}>
-//           {entry.value}
-//         </li>
-//       ))}
-//     </ul>
-//   );
-// };
