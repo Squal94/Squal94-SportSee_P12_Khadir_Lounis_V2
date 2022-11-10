@@ -37,11 +37,7 @@ For different libraries you must :
 
     `npm install `
 
-    2. initialization npm :
-
-    `npm init `
-
-    3. libary use for the project :
+    2. libary use for the project :
 
       -  create react app
       -  react router dom
@@ -61,6 +57,9 @@ with the code :
 And start the application with the code :
 
 `npm start`
+
+(do not forget in the console to place you in the front folder with command
+`cd front` before launching `npm start`)
 
 And happy navigation.
 
